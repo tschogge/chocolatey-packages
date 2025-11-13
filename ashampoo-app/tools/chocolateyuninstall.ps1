@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'ashampoo-winoptimizer-28*'
+  softwareName   = 'ashampoo-app*'
   fileType       = 'EXE'
-  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).Uninstall.log`""
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).Uninstall.log`""
   validExitCodes = @(0)
 }
 
