@@ -36,23 +36,7 @@ $installParams = @{
   Path                                  = $tempFile
   DeferRegistrationWhenPackagesAreInUse = $true
 }
-$result = Add-AppxPackage @installParams
-
-Write-Host "Installed $result.PackageFullName on your machine"
-
-if ($result) {
-  $packageFullName = $result.PackageFullName
-  # In Registry speichern
-  $registryPath = "HKLM:\SOFTWARE\Chocolatey\$(Split-Path -Leaf (Split-Path -Parent $MyInvocation.MyCommand.Definition))"
-  New-Item -Path $registryPath -Force | Out-Null
-  Set-ItemProperty -Path $registryPath -Name "PackageFullName" -Value $packageFullName
-
-  Write-Host "Added $packageFullName to registry"
-}
-else {
-  Write-Host "Install failed"
-  exit 1
-}
+Add-AppxPackage @installParams
 
 Write-Host "Removing $tempFile"
 Remove-Item $tempFile
