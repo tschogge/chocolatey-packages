@@ -1,36 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey
-uses a special version of NuGet.Core that allows us to do more than was initially possible. As such
-there are certain things to be aware of:
-
-* the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl,
-mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring
-tools or commands will error on those elements
--->
-
-<!-- You can embed software files directly into packages, as long as you are not bound by
-distribution rights. -->
-<!-- * If you are an organization making private packages, you probably have no issues here -->
-<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter
 enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>threema-desktop-2</id>
+    <id>threema-app</id>
     <version>2.0-beta57</version>
-    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-desktop-2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-app</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
     <owners>tschogge</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
-    <title>Threema Desktop 2.0 (Install)</title>
+    <title>Threema Desktop App 2.0 (Install)</title>
     <authors>Threema GmbH</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://threema.com/de/download/threema-private/desktop-beta</projectUrl>
@@ -39,16 +22,9 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
     <iconUrl>
-      https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/threema-desktop-2/Threema_Private_App_Icon.png</iconUrl>
+      https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/threema-app/Threema_Private_App_Icon.png</iconUrl>
     <copyright>2025 Threema GmbH</copyright>
-    <!-- If there is a license Url available, it is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software
-    Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>https://threema.com/en/faq/md-overview</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>threema-desktop threema messenger web-messenger threema-messenger</tags>
     <summary>The beta version of Threema 2.0 for desktop allows users to already use the upcoming
       multi-device functionality with a mobile device and up to two computers.</summary>
@@ -62,7 +38,6 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
       mobile Threema app (version 6.0 for Android and version 6.4 for iOS and above) with the beta
       version of Threema 2.0 installed on a computer and use them independently from each other.
       (The regular desktop app can still be used alongside the beta version.)</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
   </metadata>
   <files>
