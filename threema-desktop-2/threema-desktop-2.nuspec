@@ -20,9 +20,9 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>threema-desktop</id>
+    <id>threema-desktop-2</id>
     <version>2.0-beta57</version>
-    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-desktop</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-desktop-2</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
     <owners>tschogge</owners>
@@ -30,7 +30,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>threema-desktop (Install)</title>
+    <title>Threema Desktop 2.0 (Install)</title>
     <authors>Threema GmbH</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://threema.com/de/download/threema-private/desktop-beta</projectUrl>
@@ -39,7 +39,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
     <iconUrl>
-      https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/threema-desktop/Threema_Private_App_Icon.png</iconUrl>
+      https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/threema-desktop-2/Threema_Private_App_Icon.png</iconUrl>
     <copyright>2025 Threema GmbH</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
