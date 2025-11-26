@@ -6,7 +6,6 @@
 # 2. Follow the documentation below to learn how to create a package for the package type you are creating.
 # 3. In Chocolatey scripts, ALWAYS use absolute paths - $toolsDir gets you to the package's tools directory.
 $ErrorActionPreference = 'Stop' # stop on all errors
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Internal packages (organizations) or software that has redistribution rights (community repo)
 # - Use `Install-ChocolateyInstallPackage` instead of `Install-ChocolateyPackage`
 #   and put the binaries directly into the tools folder (we call it embedding)
@@ -15,48 +14,52 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 # Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
 # Internal/Organization: Download from internal location (internet sources are unreliable)
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url64 = 'https://releases.threema.ch/desktop/latest/threema-desktop-latest-windows-x64.msix' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$checksum64 = '79B4ED7ED9996B813D9242F64A4900934267B00DFE6A90554ED8F97620D8A279'
 
+$tempFile = "$env:TEMP\$env:ChocolateyPackageName.msix"
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
-  url           = $url
-  url64bit      = $url64
-  #file         = $fileLocation
-
-  softwareName  = 'threema-desktop*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-
-  # Checksums are required for packages which will be hosted on the Chocolatey Community Repository.
-  # To determine checksums, you can get that from the original site if provided.
-  # You can also use checksum.exe (choco install checksum) and use it
-  # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
-  checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
-  checksumType64= 'sha256' #default is checksumType
-
-  # MSI
-  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-  validExitCodes= @(0, 3010, 1641)
-  # OTHERS
-  # Uncomment matching EXE type (sorted by most to least common)
-  #silentArgs   = '/S'           # NSIS
-  #silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
-  #silentArgs   = '/s'           # InstallShield
-  #silentArgs   = '/s /v"/qn"'   # InstallShield with MSI
-  #silentArgs   = '/s'           # Wise InstallMaster
-  #silentArgs   = '-s'           # Squirrel
-  #silentArgs   = '-q'           # Install4j
-  #silentArgs   = '-s'           # Ghost
-  # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
-  #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
-                                 #       https://community.chocolatey.org/packages/autohotkey.portable
-  #validExitCodes= @(0) #please insert other valid exit codes here
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'MSIX'
+  url64bit       = $url64
+  softwareName   = "$env:ChocolateyPackageName*"
+  checksum64     = $checksum64
+  checksumType64 = 'sha256'
+  file           = $tempFile
 }
 
-Install-ChocolateyPackage @packageArgs # https://docs.chocolatey.org/en-us/create/functions/install-chocolateypackage
+Get-ChocolateyWebFile @packageArgs
+
+Write-Host "Installing $env:ChocolateyPackageName from $tempFile"
+
+$installParams = @{
+  Path                                  = $tempFile
+  DeferRegistrationWhenPackagesAreInUse = $true
+}
+$result = Add-AppxPackage @installParams
+
+Write-Host "Installed $result.PackageFullName on your machine"
+
+if ($result) {
+  $packageFullName = $result.PackageFullName
+  # In Registry speichern
+  $registryPath = "HKLM:\SOFTWARE\Chocolatey\$(Split-Path -Leaf (Split-Path -Parent $MyInvocation.MyCommand.Definition))"
+  New-Item -Path $registryPath -Force | Out-Null
+  Set-ItemProperty -Path $registryPath -Name "PackageFullName" -Value $packageFullName
+
+  Write-Host "Added $packageFullName to registry"
+}
+else {
+  Write-Host "Install failed"
+  exit 1
+}
+
+Write-Host "Removing $tempFile"
+Remove-Item $tempFile
+
+Write-Host "Successfully installed $env:ChocolateyPackageName"
+
+# https://docs.chocolatey.org/en-us/create/functions/install-chocolateypackage
 #Install-ChocolateyZipPackage @packageArgs # https://docs.chocolatey.org/en-us/create/functions/install-chocolateyzippackage
 ## If you are making your own internal packages (organizations), you can embed the installer or
 ## put on internal file share and use the following instead (you'll need to add $file to the above)
