@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://getcoldturkey.com/files/Cold_Turkey_Installer.exe?v=26Aug25'
-$url64 = 'https://getcoldturkey.com/files/Cold_Turkey_Installer.exe?v=26Aug25'
+$url = 'https://getcoldturkey.com/files/Cold_Turkey_Installer.exe?v=02Dec25'
+$url64 = 'https://getcoldturkey.com/files/Cold_Turkey_Installer.exe?v=02Dec25'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -12,9 +12,9 @@ $packageArgs = @{
 
   softwareName   = 'cold-turkey-blocker*'
 
-  checksum       = '430BF364964C9178AE3EB09FEE9F0B2278D37DFFA60533E4C072C7D9C469C730'
+  checksum       = '5975ADADC52C96E6B72AE0774D6FF9738F1935E92475B5415758C657A7E4843A'
   checksumType   = 'sha256'
-  checksum64     = '430BF364964C9178AE3EB09FEE9F0B2278D37DFFA60533E4C072C7D9C469C730'
+  checksum64     = '5975ADADC52C96E6B72AE0774D6FF9738F1935E92475B5415758C657A7E4843A'
   checksumType64 = 'sha256'
 
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG="C:\temp\install.log"'
