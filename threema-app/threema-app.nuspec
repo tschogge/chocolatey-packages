@@ -5,7 +5,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>threema-app</id>
-    <version>2.0-beta59</version>
+    <version>2.0-beta57</version>
     <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-app</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
@@ -38,7 +38,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
       mobile Threema app (version 6.0 for Android and version 6.4 for iOS and above) with the beta
       version of Threema 2.0 installed on a computer and use them independently from each other.
       (The regular desktop app can still be used alongside the beta version.)</description>
-    <!-- =============================== -->hree
+    <!-- =============================== -->
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
