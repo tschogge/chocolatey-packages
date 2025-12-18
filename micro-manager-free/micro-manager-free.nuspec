@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>micro-manager-free</id>
+    <version>1.2</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl
+    is highly recommended for the community feed</packageSourceUrl>-->
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
+    compatibility reasons. It basically means you. -->
+    <owners>Tschogge</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>micro-manager-free (Install)</title>
+    <authors>Felix</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://getcoldturkey.com/micromanager/</projectUrl>
+    <iconUrl>
+      https://github.com/tschogge/chocolatey-packages/blob/main/micro-manager-free/micromanager-icon-48.png</iconUrl>
+    <copyright>2025 Cold Turkey Software, Inc</copyright>
+    <docsUrl>https://getcoldturkey.com/micromanager/features/</docsUrl>
+    <tags>micro-manager-free micro-manager app-block focus productivity</tags>
+    <summary>Micromanager only lets you use whitelisted apps you need to do work, while blocking
+      everything else.</summary>
+    <description>Micromanager locks your attention into applications you selected in your whitelist.
+      Any other application you try to open will be minimized or closed until your block is over.
+      Your productivity suffers when you try to split your attention over multiple tasks. There's
+      even science to back this up. </description>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
