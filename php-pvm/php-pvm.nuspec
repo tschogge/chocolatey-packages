@@ -4,7 +4,7 @@
   <metadata>
     <id>php-pvm</id>
     <version>2.0.0</version>
-    <packageSourceUrl>https://github.com/tschogge/php-pvm</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/php-pvm</packageSourceUrl>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>pvm</title>

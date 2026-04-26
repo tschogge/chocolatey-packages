@@ -25,8 +25,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>cold-turkey-blocker</id>
     <version>4.9</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl
-    is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/cold-turkey-blocker</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
     <releaseNotes>
