@@ -41,8 +41,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version
     number is final, that is considered a released version and not a prerelease. -->
     <version>2.13.0</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl
-    is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/ashampoo-app</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
     <owners>tschogge</owners>

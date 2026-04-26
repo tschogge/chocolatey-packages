@@ -4,8 +4,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>micro-manager-free</id>
     <version>1.2</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl
-    is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/micro-manager-free</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
     <owners>Tschogge</owners>
