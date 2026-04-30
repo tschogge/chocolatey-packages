@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $url64 = 'https://releases.threema.ch/desktop/latest/threema-desktop-latest-windows-x64.msix'
-$checksum64 = '4E12CABAC2697DBAEC98BB64B96DB9C88A5A671D43A0130896AF214B8148CD1B'
+$checksum64 = 'D8704FA6425AB890C89953C5718FB3714CDDB58C3278074E859AA3D9F0856C2F'
 
 $tempFile = "$env:TEMP\$env:ChocolateyPackageName.msix"
 $packageArgs = @{
