@@ -1,14 +1,10 @@
-# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
-#   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
-
 $ErrorActionPreference = 'Stop'
 $packageName = $env:ChocolateyPackageName
 
 Write-Host "Uninstalling $packageName..."
 
 # Check if uv is available
-$uvAvailable = (Get-Command uv -ErrorAction SilentlyContinue) -ne $null
+$uvAvailable = $null -ne (Get-Command uv -ErrorAction SilentlyContinue)
 
 if ($uvAvailable) {
     # Check if mistral-vibe is installed via uv

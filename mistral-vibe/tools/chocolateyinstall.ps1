@@ -44,7 +44,7 @@ else {
     Write-Host "uv is already installed."
 }
 
-# Verify uv is available
+# Verify if uv is available
 $uvAvailable = $null -ne (Get-Command uv -ErrorAction SilentlyContinue)
 if (-not $uvAvailable) {
     throw "uv is still not available after installation attempt. Please install it manually."
