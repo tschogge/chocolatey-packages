@@ -1,24 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://getcoldturkey.com/files/Cold_Turkey_Micromanager_Free_Installer.exe'
-$url64      = 'https://getcoldturkey.com/files/Cold_Turkey_Micromanager_Free_Installer.exe'
+$fileName   = 'Cold_Turkey_Micromanager_Free_Installer-1.3.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
   fileType      = 'EXE'
-  url           = $url
-  url64bit      = $url64
+  file         = "$toolsDir\$fileName"
 
   softwareName  = 'micro-manager-free*'
 
-  checksum      = '550691F5EE2D1EE8F30299C0E0602FBC4BEF42DA2F2B7AD1F7A2C77E5AB9B538'
+  checksum      = '4E4A6BA066CAF4E7F124451EDDE48D9B3138D3F6CC534C141D2773A5795432A4'
   checksumType  = 'sha256'
-  checksum64    = '550691F5EE2D1EE8F30299C0E0602FBC4BEF42DA2F2B7AD1F7A2C77E5AB9B538'
-  checksumType64= 'sha256'
 
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG="C:\temp\install.log"'
   validExitCodes= @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
