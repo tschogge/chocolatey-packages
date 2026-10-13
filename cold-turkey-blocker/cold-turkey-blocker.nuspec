@@ -24,7 +24,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>cold-turkey-blocker</id>
-    <version>4.9</version>
+    <version>4.9.1</version>
     <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/cold-turkey-blocker</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
@@ -57,7 +57,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     More information can be found here:
     https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://getcoldturkey.com/assets/icons/og-logo.png</iconUrl>
+    <iconUrl>https://github.com/tschogge/chocolatey-packages/blob/maincold-turkey-blocker/cold-turkey-logo.png</iconUrl>
 
     <tags>cold-turkey-blocker blocker cold-turkey screen-time time school work</tags>
     <summary>Block websites, games and applications to boost your productivity and reclaim your free
