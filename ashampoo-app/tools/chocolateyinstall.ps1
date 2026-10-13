@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://drive.usercontent.google.com/download?id=1hCQdJ6fEEcb1mROWmuB1alXLwCLKo-57&export=download&authuser=0&confirm=t&uuid=decbb1bd-d432-4bab-b827-fc3d463c12a8&at=AMrWOn1-10tZ6YlGJLSCHxRjZyRg%3A1791891288129'
-$url64 = 'https://drive.usercontent.google.com/download?id=1hCQdJ6fEEcb1mROWmuB1alXLwCLKo-57&export=download&authuser=0&confirm=t&uuid=decbb1bd-d432-4bab-b827-fc3d463c12a8&at=AMrWOn1-10tZ6YlGJLSCHxRjZyRg%3A1791891288129'
+$url = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.18.2.exe'
+$url64 = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.18.2.exe'
 $checksum = 'E966262674E47E4973F48D8A5249B866D6F7AE15B736D31BBD55CD666320165D'
 
 $packageArgs = @{
