@@ -17,3 +17,18 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+
+$installPath = "${env:ProgramFiles}\Cold Turkey Micromanager"
+$exeFile = Get-ChildItem -Path $installPath -Filter *.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+
+if ($exeFile -and $exeFile.Exists) {
+    $startMenuPath = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Cold Turkey"
+    
+    if (!(Test-Path $startMenuPath)) {
+        New-Item -ItemType Directory -Path $startMenuPath -Force | Out-Null
+    }
+    
+    Install-ChocolateyShortcut -ShortcutFilePath "$startMenuPath\Micromanager Free.lnk" \
+        -TargetPath "$($exeFile.FullName)" \
+        -WorkingDirectory "$installPath"
+}
