@@ -1,0 +1,31 @@
+VERIFICATION.txt
+==================
+
+This file contains verification information for binary files included in the package.
+
+File: Cold_Turkey_Micromanager_Free_Installer-1.3.exe
+---------------------------------------------------
+Source URL: https://getcoldturkey.com/micromanager
+Download URL: https://getcoldturkey.com/files/Cold_Turkey_Micromanager_Free_Installer.exe
+
+Verification Method:
+- File was downloaded directly from the official vendor website
+- File name was verified to match the expected installer name
+- File size was verified: 5014336 bytes (4.78 MB)
+
+SHA256 Hash:
+4E4A6BA066CAF4E7F124451EDDE48D9B3138D3F6CC534C141D2773A5795432A4
+
+MD5 Hash:
+2E61750B779801F4907730AD4C64192F
+
+Note: The file has been renamed from "Micromanager_Free_Installer.exe" to 
+"Cold_Turkey_Micromanager_Free_Installer-1.3.exe" to include version information.
+
+Distribution Rights:
+- The maintainer has permission to redistribute this software
+- This is the free version of Micro Manager from Cold Turkey Software, Inc.
+- Redistribution is permitted as per the vendor's terms for the free version
+
+Last Verified: 2026-10-15
+Verified By: Package Maintainer (Tschogge)

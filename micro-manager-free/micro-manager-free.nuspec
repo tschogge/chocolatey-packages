@@ -19,7 +19,9 @@
     <iconUrl>
       https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/micro-manager-free/micromanager-icon-48.png</iconUrl>
     <copyright>2025 Cold Turkey Software, Inc</copyright>
+    <licenseUrl>https://getcoldturkey.com/terms/</licenseUrl>
     <docsUrl>https://getcoldturkey.com/micromanager/features/</docsUrl>
+    <releaseNotes>https://getcoldturkey.com/micromanager/changelog/</releaseNotes>
     <tags>micro-manager-free micro-manager app-block focus productivity</tags>
     <summary>Micromanager only lets you use whitelisted apps you need to do work, while blocking
       everything else.</summary>
