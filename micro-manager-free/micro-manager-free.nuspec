@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>micro-manager-free</id>
-    <version>1.2</version>
+    <version>1.3</version>
     <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/micro-manager-free</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
@@ -17,7 +17,7 @@
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://getcoldturkey.com/micromanager/</projectUrl>
     <iconUrl>
-      https://github.com/tschogge/chocolatey-packages/blob/main/micro-manager-free/micromanager-icon-48.png</iconUrl>
+      https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/micro-manager-free/micromanager-icon-48.png</iconUrl>
     <copyright>2025 Cold Turkey Software, Inc</copyright>
     <docsUrl>https://getcoldturkey.com/micromanager/features/</docsUrl>
     <tags>micro-manager-free micro-manager app-block focus productivity</tags>
