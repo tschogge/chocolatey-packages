@@ -21,6 +21,7 @@ $installParams = @{
   Path                                  = $tempFile
   DeferRegistrationWhenPackagesAreInUse = $true
 }
+
 Add-AppxPackage @installParams
 
 Write-Host "Removing $tempFile"
