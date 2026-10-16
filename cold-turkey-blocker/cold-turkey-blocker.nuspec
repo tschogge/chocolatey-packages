@@ -57,7 +57,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     More information can be found here:
     https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://github.com/tschogge/chocolatey-packages/blob/maincold-turkey-blocker/cold-turkey-logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/cold-turkey-blocker/cold-turkey-logo.png</iconUrl>
 
     <tags>cold-turkey-blocker blocker cold-turkey screen-time time school work</tags>
     <summary>Block websites, games and applications to boost your productivity and reclaim your free
