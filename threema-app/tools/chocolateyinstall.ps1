@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $url64 = 'https://releases.threema.ch/desktop/latest/threema-desktop-latest-windows-x64.msix'
-$checksum64 = 'D8704FA6425AB890C89953C5718FB3714CDDB58C3278074E859AA3D9F0856C2F'
+$checksum64 = '42ADA4166BEBD9499372AD839CECA1651727154A6D8C299249F07D1623B38ECE'
 
 $tempFile = "$env:TEMP\$env:ChocolateyPackageName.msix"
 $packageArgs = @{
@@ -21,6 +21,7 @@ $installParams = @{
   Path                                  = $tempFile
   DeferRegistrationWhenPackagesAreInUse = $true
 }
+
 Add-AppxPackage @installParams
 
 Write-Host "Removing $tempFile"

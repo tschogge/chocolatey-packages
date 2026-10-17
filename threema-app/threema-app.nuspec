@@ -5,7 +5,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>threema-app</id>
-    <version>2.0-beta60</version>
+    <version>2.0.0-beta66</version>
     <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/threema-app</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
     compatibility reasons. It basically means you. -->
@@ -15,6 +15,17 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Threema Desktop App 2.0 (Install)</title>
     <authors>Threema GmbH</authors>
+    <releaseNotes>
+      New features:
+      - Prevent screenshots and Windows Recall from recording app content
+
+      Improvements:
+      - Messages can now be forwarded within the same conversation
+
+      Fixes:
+      - Fixed a bug that prevented the app from updating itself
+
+      …and various under-the-hood changes and improvements</releaseNotes>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://threema.com/de/download/threema-private/desktop-beta</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package.
