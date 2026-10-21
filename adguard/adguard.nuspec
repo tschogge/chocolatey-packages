@@ -24,16 +24,12 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <authors>Adguard Software Ltd.</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://adguard.com</projectUrl>
-    <iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/adguard.png</iconUrl>
+    <iconUrl>https://cdn.adguardcdn.com/website/adguard.com/media-kits/logos/logo_adguard_shield.png?nc=1</iconUrl>
     <copyright>2009-2026 Adguard Software Ltd.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software
-    Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <licenseUrl>https://adguard.com/en/license.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://adguard.com/kb/de/</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>adguard adblocker adblock trackerblocker blocker </tags>
     <summary>AdGuard for Windows is more than an ad blocker. It is a multipurpose tool that blocks
       ads, controls access to dangerous websites, speeds up page loading, and protects children from
@@ -44,7 +40,11 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
       of experience, almost a dozen products for various platforms, and over 375 million user
       installs. Unlike other ad-blocking solutions, most of which are browser-based, we offer
       standalone apps for all major platforms, both desktop and mobile. AdGuard apps are more
-      powerful than browser extensions, can block more and do it more efficiently </description>
+      powerful than browser extensions, can block more and do it more efficiently.
+    
+      # Pro plan
+      There is a free version available, but you can update to the Pro plan on the website.
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
 
