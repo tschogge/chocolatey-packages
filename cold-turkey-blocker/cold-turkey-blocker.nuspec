@@ -57,13 +57,16 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     More information can be found here:
     https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://raw.githubusercontent.com/tschogge/chocolatey-packages/refs/heads/main/cold-turkey-blocker/cold-turkey-logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tschogge/chocolatey-packages@f02fc21a6da541967ff54e5ca3af9a38e28a7b27/cold-turkey-blocker/cold-turkey-logo.png</iconUrl>
 
     <tags>cold-turkey-blocker blocker cold-turkey screen-time time school work</tags>
     <summary>Block websites, games and applications to boost your productivity and reclaim your free
       time.</summary>
     <description>Other website blockers are easy to cheat. Cold Turkey Blocker makes it almost
-      impossible to stop the block once you lock it.</description>
+      impossible to stop the block once you lock it.
+      
+      Cold Turkey Blocker is free, but there is a paid Pro version (US$45 lifetime, 7-day trial)
+      </description>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
