@@ -17,7 +17,7 @@ $packageArgs = @{
   checksum64    = $checksum
   checksumType64= 'sha256'
 
-  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
+  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).ExeInstall.log`" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART"
   validExitCodes= @(0, 3010, 1641)
 }
 
