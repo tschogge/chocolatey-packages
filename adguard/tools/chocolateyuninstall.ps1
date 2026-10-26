@@ -1,32 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  softwareName  = 'adguard*'
-  fileType      = 'EXE'
-  silentArgs    = "/qn /norestart /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).ExeUninstallLog.log`""
-  validExitCodes= @(0)
-}
+$zipPath    = Join-Path $env:TEMP 'adguard_uninstall_utility.zip'
+$unzipDir   = Join-Path $env:TEMP 'adguard_uninstall_utility'
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
+$toolsUrl = 'https://static.adtidy.org/windows/uninstaller/uninstall_utility.zip'
+$checksum = 'C5E32AF264D761305770161FE1216C0B8DF33539018F1FB8C6D07998F890F692'
 
-if ($key.Count -eq 1) {
-  $key | % {
-    $packageArgs['file'] = "$($_.UninstallString)"
+Write-Host 'Downloading official Uninstall Tools'
+Get-ChocolateyWebFile -PackageName $env:ChocolateyPackageName ` -FileFullPath $zipPath -Url $toolsUrl -Checksum $checksum -ChecksumType 'sha256'
 
-    if ($packageArgs['fileType'] -eq 'MSI') {
-      $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
+Write-Host 'Unzipping tools...'
+Get-ChocolateyUnzip -FileFullPath $zipPath -Destination $unzipDir
 
-      $packageArgs['file'] = ''
-    } else {
-    }
+Write-Host 'Starting Admin process to uninstall...'
+$utility = Join-Path $unzipDir 'Adguard.UninstallUtility.exe'
+Start-ChocolateyProcessAsAdmin "`"$utility`" /console /adblocker /settings" -validExitCodes @(0, 3010, 1641)
 
-    Uninstall-ChocolateyPackage @packageArgs
-  }
-} elseif ($key.Count -eq 0) {
-  Write-Warning "$packageName has already been uninstalled by other means."
-} elseif ($key.Count -gt 1) {
-  Write-Warning "$($key.Count) matches found!"
-  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
-  Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $($_.DisplayName)"}
-}
+Write-Host 'Removing Adguard files'
+Remove-Item 'C:\ProgramData\Adguard' -Recurse -Force -ErrorAction SilentlyContinue
