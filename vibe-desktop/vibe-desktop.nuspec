@@ -30,7 +30,7 @@
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
     <iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/vibe-desktop.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <copyright>2026 Mistral</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
@@ -38,7 +38,7 @@
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>vibe-desktop SPACE_SEPARATED</tags>
+    <tags>vibe-desktop mistral mistral-vibe mistral-vibe-desktop vibe mistral-desktop ai mistral-ai </tags>
     <summary>__REPLACE__</summary>
     <description>__REPLACE__MarkDown_Okay </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
