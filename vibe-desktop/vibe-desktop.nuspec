@@ -35,12 +35,21 @@
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <docsUrl>At what url are the software docs located?</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>vibe-desktop mistral mistral-vibe mistral-vibe-desktop vibe mistral-desktop ai mistral-ai </tags>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
+    <summary>Your AI agent for long-horizon tasks, fluent in your knowledge and tools.</summary>
+    <description>
+    # Brief Vibe and move on.
+    Think through, draft, and deliver finished work you can trust from a single conversation. Describe the outcome you need and Vibe gets you there.
+    # Ship code before the standup.
+    Vibe writes, tests, and deploys across your codebase, while your developers stay on architecture and business logic.
+    # Automate what repeats.
+    Build and deploy AI agents that route, resolve, and complete work across your systems. Grounded in the knowledge and tools your teams already use.
+    # Intelligence you own, not rent.
+    Customize every layer: models fine-tuned on your data, agents that sharpen with use, and full data residency in any cloud or datacenter. Your intelligence stays yours.
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
 
