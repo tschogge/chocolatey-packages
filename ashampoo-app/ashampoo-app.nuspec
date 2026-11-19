@@ -15,10 +15,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <authors>Ashampoo GmbH &amp; Co. KG</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.ashampoo.com/de-de/app</projectUrl>
-    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package.
-    More information can be found here:
-    https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
-    <iconUrl>https://sih.ashampoo.com/fit-in/160x0/images/products/0401/boxshot.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tschogge/chocolatey-packages@0438620b4bed0f514a648980c388b41b142a9e74/ashampoo-app/Ashampoo-Symbol.png</iconUrl>
     <copyright>2026 Ashampoo</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
