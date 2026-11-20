@@ -1,0 +1,44 @@
+name: YouTrack Autolink
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  autolink:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        env:
+          YOUTRACK_URL: https://kaktuswerk.youtrack.cloud
+          YOUTRACK_PROJECT: CP
+        with:
+          script: |
+            const base = process.env.YOUTRACK_URL.replace(/\/+$/, '');
+            const prefix = process.env.YOUTRACK_PROJECT.toUpperCase() + '-';
+            // Match CP-123 but not when it is already inside a markdown link [CP-123](...)
+            const re = new RegExp(`(?<!\\[)\\b(${prefix}\\d+)\\b`, 'gi');
+
+            const link = (text) =>
+              text ? text.replace(re, (m, id) => `[${id}](${base}/issue/${id.toUpperCase()})`) : text;
+
+            const pr = context.payload.pull_request;
+            const newTitle = link(pr.title);
+            const newBody = link(pr.body || '');
+
+            if (newTitle === pr.title && newBody === (pr.body || '')) {
+              core.info('No YouTrack issue IDs found, nothing to do.');
+              return;
+            }
+
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              title: newTitle,
+              body: newBody,
+            });
+            core.info(`Autolinked YouTrack issues in PR #${pr.number}.`);
