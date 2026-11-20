@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64 = 'https://static.adguard.com/windows/setup64.msi'
-$checksum64 = 'F9EEE88D38677F85340969AD29B2CCCF31EF0B32C9138D38FDA15B746458DE2D'
+$checksum64 = 'D168697C36B3DF7273113C4C19E37D4801A1642AD224329164EBB7DDBBDA8247'
 $url32 = 'https://static.adguard.com/windows/setup86.msi'
-$checksum32 = '23CCD9A1CF99ACE647BFEF5B4A737C2AEC5227A44514ACCE5D3F124841EC079C'
+$checksum32 = '8B2BD279586B4DF0F6448F7DD1C030E18E7C2BCD980E185AF6A2875E5B729A25'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName

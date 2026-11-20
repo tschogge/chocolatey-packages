@@ -12,8 +12,8 @@ Write-Host 'Unzipping tools...'
 Get-ChocolateyUnzip -FileFullPath $zipPath -Destination $unzipDir
 
 Write-Host 'Starting Admin process to uninstall...'
-$utility = Join-Path $unzipDir 'Adguard.UninstallUtility.exe'
-Start-ChocolateyProcessAsAdmin "`"$utility`" /console /adblocker /settings" -validExitCodes @(0, 3010, 1641)
+$utility = Join-Path $unzipDir 'Output\Adguard.UninstallUtility.exe'
+Start-ChocolateyProcessAsAdmin "& `"$utility`" /console /adblocker /settings" -validExitCodes @(0, 3010, 1641)
 
 Write-Host 'Removing Adguard files'
 Remove-Item 'C:\ProgramData\Adguard' -Recurse -Force -ErrorAction SilentlyContinue
