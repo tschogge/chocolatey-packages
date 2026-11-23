@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.18.2.exe'
-$url64 = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.18.2.exe'
-$checksum = 'E966262674E47E4973F48D8A5249B866D6F7AE15B736D31BBD55CD666320165D'
+$url = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.19.2.exe'
+$url64 = 'https://cdn1.ashampoo.net/ashampoo/0401/ashampoo_app_2.19.2.exe'
+$checksum = '060C126FDFEE38272B3EA11DB27428054E9DBC963E38D71E1D210E9FE8012404'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
