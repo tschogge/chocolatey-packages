@@ -31,7 +31,7 @@ Install-ChocolateyShortcut @shortcutArgsStart
 Write-Host 'Installed start menu shortcut'
 
 Write-Host 'Installing Desktop shortcut...'
-$desktopPath = [Environment]::GetFolderPath('Desktop')
+$desktopPath = Join-Path [Environment]::GetFolderPath('Desktop') 'Fleet.lnk'
 
 $shortcutArgsDesktop = @{
   shortcutFilePath = $desktopPath

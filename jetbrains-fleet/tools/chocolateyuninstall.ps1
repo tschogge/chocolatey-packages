@@ -13,7 +13,7 @@ else {
 }
 
 Write-Host 'Removing Desktop shortcut...'
-$desktopShortcut = Join-Path ([Environment]::GetFolderPath('Desktop')) 'JetBrains Fleet.lnk'
+$desktopShortcut = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Fleet.lnk'
 if (Test-Path $desktopShortcut) {
   Remove-Item $desktopShortcut -Force
   Write-Host "Removed Desktop shortcut: $desktopShortcut"
