@@ -9,7 +9,7 @@
     <!-- This section is about the software itself -->
     <title>pvm</title>
     <authors>hjbdev,Lotti,ENG3PLabs,oldreposcrapyard,goodjun,OliverWich,EbouBaker</authors>
-    <owners>Tschogge</owners>
+    <owners>tschogge</owners>
     <projectUrl>https://github.com/hjbdev/pvm</projectUrl>
     <docsUrl>https://github.com/hjbdev/pvm</docsUrl>
     <projectSourceUrl>https://github.com/hjbdev/pvm</projectSourceUrl>
