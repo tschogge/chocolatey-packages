@@ -18,7 +18,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <copyright>2025 JetBrains</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://www.jetbrains.com/legal/docs/company/useterms/</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!--<projectSourceUrl>Software
     Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>https://web.archive.org/web/20251129141759/https://www.jetbrains.com/help/fleet/getting-started.html</docsUrl>
