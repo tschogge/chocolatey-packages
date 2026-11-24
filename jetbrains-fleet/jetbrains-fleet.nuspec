@@ -6,19 +6,15 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>jetbrains-fleet</id>
     <version>1.48.261</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl
-    is highly recommended for the community feed</packageSourceUrl>-->
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
-    compatibility reasons. It basically means you. -->
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/jetbrains-fleet</packageSourceUrl>
     <owners>tschogge</owners>
     <!-- ============================== -->
-
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Jetbrains Fleet</title>
+    <title>JetBrains Fleet</title>
     <authors>JetBrains</authors>
     <projectUrl>https://www.jetbrains.com/fleet/</projectUrl>
-    <iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/jetbrains-fleet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tschogge/chocolatey-packages@6d2f008947db43e42aa3c0b91b5758a9648919fd/jetbrains-fleet/fleet-logo.png</iconUrl>
     <copyright>2025 JetBrains</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://www.jetbrains.com/legal/docs/company/useterms/</licenseUrl>
@@ -53,7 +49,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
       Fleet’s clean UI and straightforward UX make it even easier to get started immediately.
 
       ## Maintainers Note
-      This is an unofficial install for JetBrains Fleet. This Applicatio has been discontinued and
+      This is an unofficial install for JetBrains Fleet. This application has been discontinued and
       it can't be downloaded officially. This download relies on the Web Archive, to still provide
       this code editor.
 
