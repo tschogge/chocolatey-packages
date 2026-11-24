@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter
+enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>jetbrains-fleet</id>
+    <version>1.48.261</version>
+    <packageSourceUrl>https://github.com/tschogge/chocolatey-packages/tree/main/jetbrains-fleet</packageSourceUrl>
+    <owners>tschogge</owners>
+    <!-- ============================== -->
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>JetBrains Fleet</title>
+    <authors>JetBrains</authors>
+    <projectUrl>https://www.jetbrains.com/fleet/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tschogge/chocolatey-packages@6d2f008947db43e42aa3c0b91b5758a9648919fd/jetbrains-fleet/fleet-logo.png</iconUrl>
+    <copyright>2025 JetBrains</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://www.jetbrains.com/legal/docs/company/useterms/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <!--<projectSourceUrl>Software
+    Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <docsUrl>https://web.archive.org/web/20251129141759/https://www.jetbrains.com/help/fleet/getting-started.html</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>jetbrains-fleet fleet fleet-editor jetbrains ide fleet-ide text-editor editor coding git
+      web-dev developer dev developing</tags>
+    <summary>Fleet is a code editor designed for simplicity, combining a clean UI, AI capabilities,
+      and an essential set of built-in features for most major languages.</summary>
+    <description>
+      # Fleet
+      Fleet is a code editor designed for simplicity, combining a clean UI, AI capabilities, and an
+      essential set of built-in features for most major languages.
+      ## Supercharge your development with AI Assistant
+      Could you benefit from smarter code completion? Do you need to understand your codebase
+      better? Are you struggling to write documentation? AI Assistant in Fleet is here to help.
+      Boost your productivity and enjoy an exceptional developer experience with Fleet's AI-powered
+      features.
+      ## Switch between languages - not tools
+      Do you enjoy working with different programming languages in the same project? Well, we’ve got
+      you covered! With Fleet, you can start coding in the language of your choice. Fleet is
+      designed to automatically detect your project configuration from the source code, maximizing
+      the value you get from its smart code-processing engine while minimizing the need for project
+      configuration.
+      ## Simplified
+      We built Fleet for developers who value simplicity and versatility in their coding
+      environment. When you need it, Fleet is an agile code editor for browsing and editing files.
+      Fleet’s clean UI and straightforward UX make it even easier to get started immediately.
+
+      ## Maintainers Note
+      This is an unofficial install for JetBrains Fleet. This application has been discontinued and
+      it can't be downloaded officially. This download relies on the Web Archive, to still provide
+      this code editor.
+
+      [JetBrains official statement](https://blog.jetbrains.com/fleet/2025/12/the-future-of-fleet/)
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges?
+    https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension -
+    https://community.chocolatey.org/packages/chocolatey-core.extension -->
+
+    <!--<provides>NOT
+    YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT
+    YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT
+    YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
