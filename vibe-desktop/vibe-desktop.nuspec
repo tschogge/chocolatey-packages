@@ -29,12 +29,16 @@
     <description>
     # Vibe Desktop
     Mistral Vibe Desktop is the official standalone desktop application for Mistral AI's conversational assistant. It installs the native Windows desktop client, providing direct access to Mistral's AI models for chat, writing, and coding assistance.
+
     ## Brief Vibe and move on.
     Think through, draft, and deliver finished work you can trust from a single conversation. Describe the outcome you need and Vibe gets you there.
+
     ## Ship code before the standup.
     Vibe writes, tests, and deploys across your codebase, while your developers stay on architecture and business logic.
+
     ## Automate what repeats.
     Build and deploy AI agents that route, resolve, and complete work across your systems. Grounded in the knowledge and tools your teams already use.
+    
     ## Intelligence you own, not rent.
     Customize every layer: models fine-tuned on your data, agents that sharpen with use, and full data residency in any cloud or datacenter. Your intelligence stays yours.
 
